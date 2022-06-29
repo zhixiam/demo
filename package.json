@@ -1,0 +1,28 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo vue3 express app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhixiam/demo.git"
+  },
+  "author": "\"zhixiam hong\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhixiam/demo/issues"
+  },
+  "homepage": "https://github.com/zhixiam/demo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
