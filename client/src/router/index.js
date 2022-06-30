@@ -1,5 +1,5 @@
 
-import BookVue from "@/views/BookVue.vue";
+import ShopVue from "@/views/ShopVue.vue";
 import HomeViewVue from "@/views/HomeViewVue.vue";
 import LayoutVue from "@/views/LayoutVue.vue";
 import LoginVue from "@/views/LoginVue.vue";
@@ -23,9 +23,9 @@ const router = createRouter({
           name:"",
           component: UserVue
         },{
-          path:"/Book",
-          name:"",
-          component: BookVue
+          path:"/Shop",
+          name:"Shop",
+          component: ShopVue
         },{
           path:"/Video",
           name:"",
