@@ -1,18 +1,16 @@
 <template>
 <div class="container-fluid">
-  <div class="container-fluid" style="background:azure">
-    <header class="row"> 
-      <ul class="nav ">
-        <div class="nav-item col-1">       
-        </div>
+  <div class="container-fluid" style="background:azure;height: 40px;">
+    <header class="container " > 
+      <ul class="nav float-start ">
         <li class="nav-item ">
           <Router-Link class="nav-link" to="/">
             <i class="bi bi-house-door-fill"></i>
             回首頁
           </Router-Link>
         </li>
-        <div class="nav-item col-6">       
-        </div>
+      </ul>
+      <ul class="nav float-end">
         <li class="nav-item ">
           <Router-Link class="nav-link" to="/Shop">
             <i class="bi bi-cart4"></i>
@@ -25,44 +23,37 @@
             會員中心
           </Router-Link>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <Router-Link class="nav-link" to="/Login">登入</Router-Link>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <Router-Link class="nav-link" to="/Register">註冊</Router-Link>
         </li>
       </ul>
     </header>
   </div>
-  <div class="containter header">
-  <div class="row">
+  <div class="containter d-flex" style="height:200px;" >
     <!-- 網頁商標 -->
-    <div class="col-3">
-      <img src="../assets/logo.png"  class="logo" alt="">
+    <div class="float-start" style="width:300px; height: 200px;">
+      <img src="../assets/logo.png" style="width:100%" class="logo" alt="">
     </div>
-    <div class="col-1"></div>
-    <div class="col-4 ">
-      <!-- 搜尋框 -->
-      <div class="d-flex center">
+    <!-- 搜尋框 -->
+      <div class="d-flex" style="width: 800px; height: 40px;">
         <input type="text" 
-          class="form-control left-radius col-3"
+          class="form-control left-radius "
           v-model="input"
+          style="width:400px  "
           placeholder="搜尋"
         >
-        <button type="submit" title="搜尋" class="btn btn-primary right-radius col-1">
+        <button type="submit" title="搜尋" class="btn btn-primary right-radius">
           <i class="bi bi-search cursor"></i>
           搜尋
-        </button>
+        </button>  
       </div>
+    <!-- 活動放置 -->
+    <div class="float-end" style="width:300px; height: 200px;">
+      <img src="../assets/活動.png" style="width:100%" alt="">
     </div>
-    <div class="col-1"></div>
-    <div class="col-3">
-      <!-- 活動放置 -->
-      <div >
-        <img src="../assets/活動.png" style="width:50%" alt="">
-      </div>
-    </div>
-  </div>
   </div>
   <div class="containter-main">
     <main>
@@ -79,18 +70,9 @@ const input = ref('')
 </script>
 
 <style>
-.logo{
-  width: 112px;
-  height: 63px;
-}
 .container-fluid{
   padding-right:0;
   padding-left:0
-}
-.center{
-  margin: 10px;
-  align-items: center;
-  justify-content: space-between;
 }
 .left-radius{
   border-top-left-radius: 1.0rem;
@@ -110,10 +92,11 @@ const input = ref('')
 .form-control{
   box-shadow: none;
 }
-.header{
-  margin: 10px;
-  padding: 50px;
+.logo{
+  cursor: pointer;
+  display: inline-block;
 }
+
 
 
 </style>
