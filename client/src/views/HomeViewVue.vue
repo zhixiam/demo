@@ -1,12 +1,6 @@
 <template>
-<div class="row">
-  <div class="col-md-3">
-      <div class="box">
-        <ul>
-        </ul>
-      </div>
-  </div>
-  <div class="col-md-6">
+<div class="container-fluid">
+  <div>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -38,10 +32,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
-  </div>
-  <div class="col-md-3">
-    Column
+    </div>   
   </div>
 </div>
 </template>

@@ -1,16 +1,39 @@
 <template>
-<div class="container-fluid">
-  <div class="container-fluid" style="background:azure;height: 40px;">
-    <header class="container " > 
-      <ul class="nav float-start ">
-        <li class="nav-item ">
+  <div class="container-fluid">
+    <header style="width:1280px; 
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    -webkit-box-pack: center;    
+    justify-content: center;
+    -webkit-box-align: center;
+    z-index: 999;
+    background:azure;"> 
+      <ul class="nav float-start " style="align-items:center">
+        <!-- 網頁商標 -->
+        <li class="nav-item" style="width:150px;">
           <Router-Link class="nav-link" to="/">
-            <i class="bi bi-house-door-fill"></i>
-            回首頁
+            <img src="../assets/logo.png" style="width:100%" class="logo" alt="">
           </Router-Link>
         </li>
+        <!-- 搜尋框 -->
+        <li>
+          <div class="d-flex" style="width: 700px; height: 44px; ">
+            <input type="text" 
+              class="form-control left-radius "
+              v-model="input"
+              style="width:300px  "
+              placeholder="搜尋"
+            >
+            <button type="submit" title="搜尋" class="btn btn-primary right-radius">
+              <i class="bi bi-search cursor"></i>
+              搜尋
+            </button>  
+          </div>
+        </li>
       </ul>
-      <ul class="nav float-end">
+      <ul class="nav float-end" style="align-items:center">
         <li class="nav-item ">
           <Router-Link class="nav-link" to="/Shop">
             <i class="bi bi-cart4"></i>
@@ -31,32 +54,8 @@
         </li>
       </ul>
     </header>
-  </div>
-  <div class="containter d-flex" style="height:200px;" >
-    <!-- 網頁商標 -->
-    <div class="float-start" style="width:300px; height: 200px;">
-      <img src="../assets/logo.png" style="width:100%" class="logo" alt="">
-    </div>
-    <!-- 搜尋框 -->
-      <div class="d-flex" style="width: 800px; height: 40px;">
-        <input type="text" 
-          class="form-control left-radius "
-          v-model="input"
-          style="width:400px  "
-          placeholder="搜尋"
-        >
-        <button type="submit" title="搜尋" class="btn btn-primary right-radius">
-          <i class="bi bi-search cursor"></i>
-          搜尋
-        </button>  
-      </div>
-    <!-- 活動放置 -->
-    <div class="float-end" style="width:300px; height: 200px;">
-      <img src="../assets/活動.png" style="width:100%" alt="">
-    </div>
-  </div>
   <div class="containter-main">
-    <main>
+    <main class="container">
       <router-view></router-view>
     </main>
   </div>
@@ -70,6 +69,9 @@ const input = ref('')
 </script>
 
 <style>
+ul{
+  text-align: center;
+}
 .container-fluid{
   padding-right:0;
   padding-left:0
